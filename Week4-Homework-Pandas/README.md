@@ -1,8 +1,6 @@
 ## Unit 4 | Assignment - Pandas, Pandas, Pandas
 
-## Background
-
-Heroes of Pymoli
+## Heroes of Pymoli
 
 ![Fantasy](Images/Fantasy.jpg)
 
