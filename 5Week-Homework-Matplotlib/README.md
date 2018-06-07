@@ -1,30 +1,106 @@
-## Pyber Analysis
 
-The ride sharing bonanza continues! Seeing the success of notable players like Uber and Lyft, you've decided to join a fledgling ride sharing company of your own. In your latest capacity, you'll be acting as Chief Data Strategist for the company. In this role, you'll be expected to offer data-backed guidance on new opportunities for market differentiation.
+# Pyber Analysis
 
-You've since been given access to the company's complete recordset of rides. This contains information about every active driver and historic ride, including details like city, driver count, individual fares, and city type.
+* From the first glance, it is clear that the most amount of drivers and rides is in the urban area. Given that urban population is more concentrated, this creates a higher competition for the fare rate, and inevitably, an urban fare is the lowest comparing to the suburban and rural areas. 
 
-Your objective is to build a [Bubble Plot](https://en.wikipedia.org/wiki/Bubble_chart) that showcases the relationship between four key variables:
 
-* Average Fare ($) Per City
-* Total Number of Rides Per City
-* Total Number of Drivers Per City
-* City Type (Urban, Suburban, Rural)
+* Fares in the suburban area are higher, and there are fewer rides in comparison with the urban area.
 
-In addition, you will be expected to produce the following three pie charts:
 
-* % of Total Fares by City Type
-* % of Total Rides by City Type
-* % of Total Drivers by City Type
+* An amount of rides in the rural areas is noticeably the lowest compared to the rides in the urban area. Considering a small number of drivers in the rural area, rural drivers are charging the highest fares comparing to the fares in suburban and urban areas.
 
-As final considerations:
 
-* You must use the Pandas Library and the Jupyter Notebook.
-* You must use the Matplotlib and Seaborn libraries.
-* You must include a written description of three observable trends based on the data.
-* You must use proper labeling of your plots, including aspects like: Plot Titles, Axes Labels, Legend Labels, Wedge Percentages, and Wedge Labels.
-* Remember when making your plots to consider aesthetics!
-  * You must stick to the Pyber color scheme (Gold, Light Sky Blue, and Light Coral) in producing your plot and pie charts.
-  * When making your Bubble Plot, experiment with effects like `alpha`, `edgecolor`, and `linewidths`.
-  * When making your Pie Chart, experiment with effects like `shadow`, `startangle`, and `explosion`.
-* You must include an exported markdown version of your Notebook called  `README.md` in your GitHub repository.
+```python
+# Dependencies 
+import csv 
+import matplotlib.pyplot as plt
+import pandas as pd
+```
+
+
+```python
+# Read csv files
+city_df = pd.read_csv('raw_data/city_data.csv')
+ride_df = pd.read_csv('raw_data/ride_data.csv')
+```
+
+
+```python
+# Combine both files based on common column "city"
+rides_df = pd.merge(ride_df, city_df, how="left", on="city")
+
+```
+
+
+```python
+# Create data sets for urban, suburban, and rural rides
+urban = rides_df[rides_df["type"] == "Urban"]
+suburban = rides_df[rides_df["type"] == "Suburban"]
+rural = rides_df[rides_df["type"] == "Rural"]
+
+```
+
+
+```python
+# Count average fare price, total rides, and total drivers in 3 areas
+urban_avg_fare = urban.groupby('city').mean()['fare']
+urban_ride_count = urban.groupby('city').count()['ride_id']
+urban_driver_count = urban.groupby('city').count()['driver_count']
+
+suburban_avg_fare = suburban.groupby('city').mean()['fare']
+suburban_ride_count = suburban.groupby('city').count()['ride_id']
+suburban_driver_count = suburban.groupby('city').count()['driver_count']
+
+rural_avg_fare = rural.groupby('city').mean()['fare']
+rural_ride_count = rural.groupby('city').count()['ride_id']
+rural_driver_count = rural.groupby('city').count()['driver_count']
+```
+
+
+```python
+# Create scatter plots according to the urban, suburban, and rural areas
+plt.scatter(urban_ride_count, urban_avg_fare, 
+           s=10*urban_driver_count, marker='o',
+           color='lightcoral' , edgecolor='black',
+            linewidths=1, alpha=0.1, label='Urban')
+
+plt.scatter(suburban_ride_count, suburban_avg_fare,
+            s=10*suburban_driver_count, marker='o',
+            color='lightskyblue', edgecolor='black',
+            linewidths=1, alpha=0.1, label='Suburban')
+
+plt.scatter(rural_ride_count, rural_avg_fare,
+           s=10*rural_driver_count, marker='o',
+            color='gold', edgecolor='black',
+            linewidths=1, alpha=0.1, label='Rural')
+
+# Display plots
+plt.title('Amount of Drivers By City Type')
+plt.ylabel('Average Fare ($)')
+plt.xlabel('Total Rides')
+plt.show()
+```
+
+
+![png](output_6_0.png)
+
+
+
+```python
+# Calculate the percentage of fares by city type - fares by areas / sum of all fares
+percent_by_type = rides_df.groupby("type").sum()["fare"] / rides_df['fare'].sum() * 100
+
+
+# Create pie chart 
+plt.pie(percent_by_type, labels=["Rural", "Suburban", "Urban"],
+           colors=["gold", "lightskyblue", "lightcoral"], autopct='%1.1f%%',
+           explode=[0,0,0.1], shadow=True, startangle=150)
+
+# Display the chart
+plt.title('Percentage of Fares By City Type')
+plt.show()
+```
+
+
+![png](output_7_0.png)
+
