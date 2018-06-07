@@ -1,13 +1,13 @@
 
 # Pyber Analysis
 
-* From the first glance, it is clear that the most amount of drivers and rides is in the urban area. Given that urban population is more concentrated, this creates a higher competition for the fare rate, and inevitably, an urban fare is the lowest comparing to the suburban and rural areas. 
+* From the first glance, it is clear that the most amount of drivers and rides is located in the urban area. Given that urban population is more concentrated, this creates a higher competition for the fare rate, and inevitably, an urban fare is the lowest comparing to the suburban and rural areas. 
 
 
 * Fares in the suburban area are higher, and there are fewer rides in comparison with the urban area.
 
 
-* An amount of rides in the rural areas is noticeably the lowest compared to the rides in the urban area. Considering a small number of drivers in the rural area, rural drivers are charging the highest fares comparing to the fares in suburban and urban areas.
+* An amount of rides in the rural areas is the lowest compared to the rides in the urban area. Considering a small number of drivers in the rural area, rural drivers are charging the highest fares comparing to the fares in suburban and urban areas.
 
 
 ```python
