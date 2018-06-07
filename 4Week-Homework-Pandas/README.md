@@ -117,10 +117,7 @@ total_players = players_breakdown["SN"].count()
 pd.DataFrame({"Total Players": [total_players]})
 ```
 
-
-
-
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -133,7 +130,8 @@ pd.DataFrame({"Total Players": [total_players]})
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
