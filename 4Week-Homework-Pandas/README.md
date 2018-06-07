@@ -101,9 +101,7 @@ game_data.head()
 </div>
 
 
-
 ## Player Count
-
 
 ```python
 # Separate unique players 
@@ -149,9 +147,7 @@ pd.DataFrame({"Total Players": [total_players]})
 </div>
 
 
-
 ## Purchasing Analysis (Total)
-
 
 ```python
 # Count total revenue, purchse, and average price of unique items
@@ -176,10 +172,7 @@ purchase_df
 
 ```
 
-
-
-
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -192,7 +185,8 @@ purchase_df
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -216,9 +210,7 @@ purchase_df
 </div>
 
 
-
 ## Gender Demographics
-
 
 ```python
 # Count a total amount players' gender and percentage
@@ -235,7 +227,7 @@ gender_demogr['Percentage of Players'] = gender_demogr['Percentage of Players'].
 gender_demogr
 ```
 
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -248,7 +240,8 @@ gender_demogr
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -301,10 +294,7 @@ gender_sales
 
 ```
 
-
-
-
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -317,7 +307,8 @@ gender_sales
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -362,9 +353,7 @@ gender_sales
 </div>
 
 
-
 ## Age Demographics
-
 
 ```python
 # Creat categories of age
@@ -383,14 +372,9 @@ age_demogr_percent = (age_demogr_total / total_players) * 100
 age_ranges = pd.DataFrame({"Total Count": age_demogr_total.round(2), 
                            "Percentage of Players": age_demogr_percent.round(2)})
 age_ranges.sort_index()
-
-
 ```
 
-
-
-
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -403,7 +387,8 @@ age_ranges.sort_index()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -457,10 +442,7 @@ age_ranges.sort_index()
 </table>
 </div>
 
-
-
 ## Purchasing Analysis (Age)
-
 
 ```python
 # Add column of age range to the original datafrane
@@ -484,10 +466,7 @@ age_data
  
 ```
 
-
-
-
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -500,7 +479,8 @@ age_data
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -572,10 +552,7 @@ age_data
 </table>
 </div>
 
-
-
 ## Top Spenders
-
 
 ```python
 # Count total and average purchases by indiviual players
@@ -593,10 +570,7 @@ buyer_data["Total Purchase Value"] = buyer_data["Total Purchase Value"].map("${:
 buyer_data.sort_values("Total Purchase Value", ascending=False).head(5)
 ```
 
-
-
-
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -609,7 +583,8 @@ buyer_data.sort_values("Total Purchase Value", ascending=False).head(5)
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -660,10 +635,7 @@ buyer_data.sort_values("Total Purchase Value", ascending=False).head(5)
 </table>
 </div>
 
-
-
 ## Most Popular Items
-
 
 ```python
 # Create set of data based on information about game items
@@ -685,10 +657,7 @@ item_df["Total Purchase Value"] = item_df["Total Purchase Value"].map("${:,.2f}"
 item_df.sort_values("Purchase Count", ascending=False).head()
 ```
 
-
-
-
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -701,7 +670,8 @@ item_df.sort_values("Purchase Count", ascending=False).head()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -759,20 +729,14 @@ item_df.sort_values("Purchase Count", ascending=False).head()
 </table>
 </div>
 
-
-
 ## Most Profitable Items
-
 
 ```python
 # Sort by total purchase value
 item_df.sort_values("Total Purchase Value", ascending=False).head()
 ```
 
-
-
-
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -785,7 +749,8 @@ item_df.sort_values("Total Purchase Value", ascending=False).head()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
