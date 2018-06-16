@@ -51,7 +51,7 @@ for coord in coordinates:
 
 
 ```python
-# Total of cities
+# Total count of collected cities
 len(city_list)
 ```
 
@@ -1233,6 +1233,7 @@ print('-------------------------------------------------------------')
 
 
 ```python
+# Create a dataframe for storing retrieved data
 weather_df = pd.DataFrame.from_dict(weather_dict)
 weather_df.to_csv('weather_dataset.csv')
 weather_df.head()
@@ -1328,6 +1329,7 @@ weather_df.head()
 
 
 ```python
+# Count selected sets of data after sorting and cleaning a raw data
 weather_df.count()
 ```
 
