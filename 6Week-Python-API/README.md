@@ -1241,7 +1241,7 @@ weather_df.head()
 
 
 
-<div>
+<!-- <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1254,7 +1254,8 @@ weather_df.head()
     .dataframe thead th {
         text-align: right;
     }
-</style>
+</style> -->
+
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
