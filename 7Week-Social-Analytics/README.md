@@ -1,15 +1,15 @@
 
 # News Mood 
 
-### Sentiments Analysis using VADER
+### Twitter Sentiments Analysis using VADER
 
 * Based on the analysis of the last 100 tweets by major news organizations such as BBC, CBS, CNN, Fox, and NYTimes, it is easy to notice that CBS and BBC provide most of the positive tweets. The bar chart of compound sentiments' averages proves that fact. 
 
 
-* NYTimes displays an extensive pallet of sentiments, which are evenly distributed on a scale from extremely negative to extremely positive, that makes an average of tweets' sentiments appear very close to neutral.
+* Fox displays an extensive pallet of sentiments, which are evenly distributed on a scale from extremely negative to extremely positive, that makes an average of tweets' sentiments appear very close to neutral.
 
 
-* Top 3 of most positive tweets - CBS, BBC, and Fox. Top 3 of most negative tweets - NYTimes, Fox, and CNN. Fox shows extreme polarities in their tweets, and that makes their average sentiment score be the most neutral out of all organizations. 
+* Top 3 of most positive tweets - CBS, BBC, and Fox. Top 3 of most negative tweets - NYTimes, Fox, and CNN. NYTimes shows extreme polarities in their tweets, and that makes their average sentiment score be the most neutral out of all organizations. 
 
 
 
