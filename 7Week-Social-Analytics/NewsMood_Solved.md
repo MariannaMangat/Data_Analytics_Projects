@@ -1,15 +1,15 @@
 
 # News Mood 
 
-### Twitter Sentiments Analysis using VADER
+### Sentiments Analysis using VADER
 
 * Based on the analysis of the last 100 tweets by major news organizations such as BBC, CBS, CNN, Fox, and NYTimes, it is easy to notice that CBS and BBC provide most of the positive tweets. The bar chart of compound sentiments' averages proves that fact. 
 
 
-* Fox displays an extensive pallet of sentiments, which are evenly distributed on a scale from extremely negative to extremely positive, that makes an average of tweets' sentiments appear very close to neutral.
+* NYTimes displays an extensive pallet of sentiments, which are evenly distributed on a scale from extremely negative to extremely positive, that makes an average of tweets' sentiments appear very close to neutral.
 
 
-* Top 3 of most positive tweets - CBS, BBC, and Fox. Top 3 of most negative tweets - NYTimes, Fox, and CNN. NYTimes shows extreme polarities in their tweets, and that makes their average sentiment score be the most neutral out of all organizations. 
+* Top 3 of most positive tweets - CBS, BBC, and Fox. Top 3 of most negative tweets - NYTimes, Fox, and CNN. Fox shows extreme polarities in their tweets, and that makes their average sentiment score be the most neutral out of all organizations. 
 
 
 
@@ -94,7 +94,10 @@ news_sentiments_df = pd.DataFrame(sentiments, columns=["Source",
 news_sentiments_df.head()
 ```
 
-<!-- <div>
+
+
+
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -107,9 +110,7 @@ news_sentiments_df.head()
     .dataframe thead th {
         text-align: right;
     }
-</style> -->
-
-
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -254,9 +255,9 @@ average_sentiment
     Source
     @BBC        0.216308
     @CBS        0.331694
-    @CNN       -0.038522
-    @FoxNews   -0.043623
-    @NYTimes   -0.038902
+    @CNN       -0.025918
+    @FoxNews   -0.033504
+    @NYTimes   -0.044761
     Name: Compound, dtype: float64
 
 
@@ -277,9 +278,11 @@ for sentiment in average_sentiment:
     
 plt.bar(x_axis, average_sentiment, tick_label = xlabels, color = ['r', 'b', 'purple', 'grey', 'orange'], edgecolor='black')
 plt.axhline(y=0, linestyle='-', linewidth = 3, color = "black", alpha=.25)
-
 plt.figtext(.95, .5, "Note: \nHorizantal line denotes neutral tweet sentiment", fontsize=12)
-plt.title("Overall Sentiment of Media Tweets (11/5/2017)")
+
+now = datetime.now()
+now = now.strftime("%Y/%m/%d")
+plt.title(f"Overall Sentiment of Media Tweets ({now})\n")
 plt.xlabel("News Organizations")
 plt.ylabel("Tweet Polarity")
 
