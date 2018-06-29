@@ -1,1 +1,1 @@
-# UCI-DataAnalytics-Homework
+# UCI Data Analytics Boot Camp Homework
