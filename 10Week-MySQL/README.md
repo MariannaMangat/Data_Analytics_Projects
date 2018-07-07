@@ -3,16 +3,16 @@
 
 use sakila;
 
-# 1a. Display the first and last names of all actors from the table `actor`.
+### 1a. Display the first and last names of all actors from the table `actor`.
 select first_name, last_name from actor;
 
 
-# 1b. Display the first and last name of each actor in a single column in upper case letters. Name the column `Actor Name`.
+### 1b. Display the first and last name of each actor in a single column in upper case letters. Name the column `Actor Name`.
 SELECT upper(CONCAT(a.first_name, ' ', a.last_name)) AS `Actor Name` FROM `actor` a;
 
 
-# 2a. You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, "Joe." 
-#     What is one query would you use to obtain this information?
+### 2a. You need to find the ID number, first name, and last name of an actor, of whom you know only the first name, "Joe." 
+###     What is one query would you use to obtain this information?
 select actor_id, first_name, last_name from actor
 where first_name = 'Joe';
 
