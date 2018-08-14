@@ -1,1 +1,31 @@
-# UCI Data Analytics Boot Camp Homework
+# NEW:  D3.js Data Visualization
+
+## Data Analytics
+
+01. Excel
+
+02. VBA
+
+03.  Python
+
+04.  Pandas
+
+05.  Matplotlib
+
+06.  Python API
+
+07.  Social Analytics - Vader
+
+08.  MySQL
+
+09.  SQLAlchemy - Flask API
+
+10.  HTML - CSS  [Preview](https://mariannamangat.github.io/html/)
+
+11.  MongoDB  [Preview](https://mariannamangat.github.io/mongo/)
+
+12.  JavaScript  [Preview](https://mariannamangat.github.io/js/)
+
+13.  JavaScript API  
+
+14.  D3.js  [Preview](https://mariannamangat.github.io/d3/)
