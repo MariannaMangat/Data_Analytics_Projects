@@ -6,4 +6,4 @@ This map was created using Leaflet, it plots all of the earthquakes from the Uni
 
 The map was built to illustrate the relationship between tectonic plates and seismic activity.
 
-To preview Leaflet Map, click here ![https://mariannamangat.github.io/leaflet/](https://mariannamangat.github.io/leaflet/)
+To preview Leaflet Map, click here  https://mariannamangat.github.io/leaflet/
