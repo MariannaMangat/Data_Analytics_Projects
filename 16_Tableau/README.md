@@ -11,8 +11,6 @@ City officials have a number of questions on the program. This analysis gives vi
 
 ## Citi Bike Program Questions:
 
-
-- - -
 ### 1. How many trips have been recorded total during the chosen period?
 
 ![Q1.PNG](tableau_images/Q1.PNG)
