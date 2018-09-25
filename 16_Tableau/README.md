@@ -1,7 +1,7 @@
 
 <!--lint enable no-heading-punctuation-->
 
-# Analysis of CITI Bike Rides in NYC 
+# Analysis of Citi Bike Rides in NYC 
 ## Tableau Data Visualization 
 
 Since 2013, the Citi Bike Program has implemented a robust infrastructure for collecting data on the program's utilization. Through the team's efforts, each month bike data is collected, organized, and made public on the [Citi Bike Data](https://www.citibikenyc.com/system-data) webpage.
