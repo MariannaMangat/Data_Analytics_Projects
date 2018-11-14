@@ -1,7 +1,6 @@
-# NEW:  Tableau Data Visualization
+ # Data Analytics and Data Visualization Projects
 
 - - -
-## Data Analytics 
 
 01. Excel
 
