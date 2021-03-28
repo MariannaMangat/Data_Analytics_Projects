@@ -17,8 +17,7 @@ City officials have a number of questions on the program. This analysis gives vi
 
 
 - - -
-### 2. By what percentage has total ridership grown? 
-### 3. How has the proportion of short-term customers and annual subscribers changed?
+### 2. By what percentage has total ridership grown? How has the proportion of short-term customers and annual subscribers changed?
 
 ![Q2-Q3.PNG](tableau_images/Q2-Q3.PNG)
 
