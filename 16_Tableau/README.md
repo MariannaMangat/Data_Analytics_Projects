@@ -17,24 +17,25 @@ City officials have a number of questions on the program. This analysis gives vi
 
 
 - - -
-### 2. By what percentage has total ridership grown? How has the proportion of short-term customers and annual subscribers changed?
+### 2. By what percentage has total ridership grown? 
+###    How has the proportion of short-term customers and annual subscribers changed?
 
 ![Q2-Q3.PNG](tableau_images/Q2-Q3.PNG)
 
 
 - - -
-### 4. What are the peak hours in which bikes are used during summer months? 
+### 3. What are the peak hours in which bikes are used during summer months? 
 
 ![Q4.PNG](tableau_images/Q4.PNG)
 
 
 - - -
-### 5. What are the peak hours in which bikes are used during winter months?
+### 4. What are the peak hours in which bikes are used during winter months?
 
 ![Q5.PNG](tableau_images/Q5.PNG)
 
 
 - - -
-### 6. What are the top 10 stations in the city for starting a journey? 
+### 5. What are the top 10 stations in the city for starting a journey? 
 
 ![Q6.PNG](tableau_images/Q6.PNG)
